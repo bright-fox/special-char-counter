@@ -13,7 +13,7 @@ python3 -m venv char_env
 ```
 3. Activate the virtual environment
 ```bash
-source venv/bin/activate
+source char_env/bin/activate
 ```
 4. Install the packages
 ```bash
