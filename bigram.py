@@ -12,7 +12,7 @@ if not sys.argv[1]:
 
 path = sys.argv[1]
 if not os.path.exists(path):
-    raise Exception("Please provide a valid")
+    raise Exception("Please provide a valid path..")
 
 path = os.path.abspath(path)
 bigram_counter = defaultdict(lambda: 0)
