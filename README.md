@@ -1,6 +1,6 @@
 # Special Character Counter
 
-This python script counts the occurences for each special character inside a project.
+This python script counts the occurences for each special character inside a TypeScript project.
 
 This is helpful when you want to create a symbol layer on your programmable keyboard.
 
