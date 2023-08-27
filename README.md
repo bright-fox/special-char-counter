@@ -20,12 +20,12 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 5. Run the script
-The script receives as an argument the path to the project's folder.
-```bash
-python single_char.py ./path-to-project
-```
+    - The script receives as an argument the path to the project's folder.
+    ```bash
+    python single_char.py ./path-to-project
+    ```
 
-The other script lets you count the occurences for special character bigrams. It also receives as an argument the path to the project's folder.
-```bash
-python bigram.py ./path-to-project
-```
+    - The other script lets you count the occurences for special character bigrams. It also receives as an argument the path to the project's folder.
+    ```bash
+    python bigram.py ./path-to-project
+    ```
