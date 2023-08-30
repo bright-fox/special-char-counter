@@ -17,7 +17,10 @@ source char_env/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
-5. Run the script
+
+5. **[Optional]** Add a `.exclude` file with the help of `.exclude.example` file to define regex rules for ignoring lines in files
+
+6. Run the script
     ```bash
     python main.py ./path/to/your/project
     ```
