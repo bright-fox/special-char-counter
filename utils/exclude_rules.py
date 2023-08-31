@@ -13,7 +13,7 @@ def load_exclusion_rules(path):
 
     path = Path(path)
     if not path.is_file():
-        raise Exception("path either does not exist or is not file")
+        return []
 
     with open(path, "r") as f:
         return [re.compile(line.strip()) for line in f if line.strip() != ""]
