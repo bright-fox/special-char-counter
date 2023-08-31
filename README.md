@@ -2,6 +2,8 @@
 
 This project contains a python script which counts the special characters inside any project. This can be helpful when creating a symbol layer on your programmable keyboard and deciding on where to place each symbol.
 
+<img src="assets/imgs/example_plot.png" alt="example plot output" width="75%"/>
+
 ## How to run the script
 
 1. Clone the project
