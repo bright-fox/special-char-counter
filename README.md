@@ -11,36 +11,56 @@ The script supports counting either:
 ## How to run the script
 
 1. Clone the project
-2. Create a virtual environment
 ```bash
-python3 -m venv char_env
+git clone https://github.com/bright-fox/symbol-counter.git
+cd symbol-counter
+```
+3. Create a virtual environment
+```bash
+python3 -m venv symbol_counter_env
 ```
 3. Activate the virtual environment
 ```bash
-source char_env/bin/activate
+source symbol_counter_env/bin/activate
 ```
 4. Install the required packages
 ```bash
 pip install -r requirements.txt
 ```
 
-5. **[Optional]** Add a `.exclude` file with the help of `.exclude.example` file to define regex rules for ignoring lines in files
+5. _(Optional)_ Configure exclusions
+> Add a `.exclude` file with the help of `.exclude.example` file to define regex rules for ignoring lines in files
 
-6. Run the script
+8. Run the script
 ```bash
 python main.py ./path/to/your/project
 ```
 
-- The following parameters can be used to adjust the script's behaviour:
-
+### Arguments
 
 | Argument        | Type     | Choices                  | Default | Help                                                                                       |
 |-----------------|----------|--------------------------|---------|--------------------------------------------------------------------------------------------|
-| `--pattern`     | `str`    | `["single", "bigram"]`   | `single`| You can choose between counting single characters and bigrams. |
-| `--ext`         | `str`    |                          | `ts`    | Choose your files the script should look at by file extension. |
-| `--out`         | `str`    | `["visual", "cmd", "txt"]`| `visual`| Type of output for the results: Output in command line, saved in txt file or displayed in plot. |
-| `--min_count`   | `int`    |                          |         | When specified, only ouput results which were counted at least `min_count` times. |
-| `--max_entries` | `int`    |                          |         | When specified, only output the top `max_entries` results. |
-| `--exclude_path`| `str`    |                          | `./.exclude`| You can define regex rules for ignoring lines in files in a file and provide the path to this file here. Each line in the regex file represents an ignore rule. |
+| `--pattern`     | `str`    | `["single", "bigram"]`   | `single`| Count either single characters or bigrams (pairs of characters). |
+| `--ext`         | `str`    |                          | `ts`    | Filter files by extension (e.g., py, js, ts). |
+| `--out`         | `str`    | `["visual", "cmd", "txt"]`| `visual`| Choose output format: chart (visual), terminal (cmd), or text file (txt). |
+| `--min_count`   | `int`    |                          |         | Show only symbols that appear at least min_count times. |
+| `--max_entries` | `int`    |                          |         | Limit output to the top max_entries results. |
+| `--exclude_path`| `str`    |                          | `./.exclude`| Path to a regex file for ignored lines. Each line in the file is one rule. |
+
+### Examples
+
+```bash
+# Count single characters in all .ts files
+python main.py ./my_project --pattern single --ext ts
+
+# Count bigrams in Python files and save results to txt
+python main.py ./my_project --pattern bigram --ext py --out txt
+
+# Show only symbols that appear at least 10 times
+python main.py ./my_project --min_count 10
+
+# Limit output to the top 20 results and print in terminal
+python main.py ./my_project --max_entries 20 --out cmd
+```
 
 
