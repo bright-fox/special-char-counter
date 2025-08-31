@@ -1,11 +1,11 @@
-# Special Character Counter
+# Symbol Counter
 
-This project contains a python script which counts the special characters inside any project. This can be helpful when creating a symbol layer on your programmable keyboard and deciding on where to place each symbol.
+This project provides a Python script that counts special characters in a codebase or text project. It can be particularly useful when designing a symbol layer for a programmable keyboard, helping you decide where to place each symbol for optimal efficiency.
 
-You can count either:
-- single characters
-- bigrams
+The script supports counting either:
 
+- Single characters (e.g., `@`, `#`, `{`)
+- Bigrams (pairs of characters, e.g., `!=`, `->`)
 <img src="assets/imgs/example_plot.png" alt="example plot output" width="75%"/>
 
 ## How to run the script
